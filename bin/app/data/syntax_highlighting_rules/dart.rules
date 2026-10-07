@@ -1,0 +1,87 @@
+[
+  {
+    "type": "quotation",
+    "range": { "start": "'''", "end": "'''" },
+    "priority": true
+  },
+  {
+    "type": "quotation",
+    "range": { "start": "\"\"\"", "end": "\"\"\"" },
+    "priority": true
+  },
+  {
+    "type": "quotation",
+    "patterns": [
+      "r?(?:\"(?:[^\\\"]|\\.)*\")",
+      "r?(?:'(?:[^\\']|\\.)*')"
+    ],
+    "priority": true
+  },
+  {
+    "type": "comment",
+    "patterns": [ "//[^\\n]*" ],
+    "priority": true
+  },
+  {
+    "type": "comment",
+    "range": { "start": "/\\*", "end": "\\*/" },
+    "priority": true
+  },
+  {
+    "type": "keyword",
+    "patterns": [
+      "\\babstract\\b", "\\bas\\b", "\\bassert\\b",
+      "\\basync\\b", "\\bawait\\b", "\\bbase\\b",
+      "\\bbreak\\b", "\\bcase\\b", "\\bcatch\\b",
+      "\\bclass\\b", "\\bconst\\b", "\\bcontinue\\b",
+      "\\bcovariant\\b", "\\bdeferred\\b", "\\bdefault\\b",
+      "\\bdo\\b", "\\bdynamic\\b", "\\belse\\b",
+      "\\benum\\b", "\\bextends\\b", "\\bextension\\b",
+      "\\bexternal\\b", "\\bfactory\\b", "\\bfalse\\b",
+      "\\bfinal\\b", "\\bfinally\\b", "\\bfor\\b",
+      "\\bFunction\\b", "\\bget\\b", "\\bhide\\b",
+      "\\bif\\b", "\\bimplements\\b", "\\bimport\\b",
+      "\\bin\\b", "\\binterface\\b", "\\bis\\b",
+      "\\blate\\b", "\\blibrary\\b", "\\bmacro\\b",
+      "\\bmixin\\b", "\\bnew\\b", "\\bnull\\b",
+      "\\bon\\b", "\\boperator\\b", "\\bpart\\b",
+      "\\brequired\\b", "\\breturn\\b", "\\bsealed\\b",
+      "\\bset\\b", "\\bshow\\b", "\\bstatic\\b",
+      "\\bsuper\\b", "\\bswitch\\b", "\\bsync\\b",
+      "\\bthis\\b", "\\bthrow\\b", "\\btrue\\b",
+      "\\btry\\b", "\\btypedef\\b", "\\bvar\\b",
+      "\\bvoid\\b", "\\bwhen\\b", "\\bwhile\\b",
+      "\\bwith\\b", "\\byield\\b"
+    ]
+  },
+  {
+    "type": "type",
+    "patterns": [
+      "\\bbool\\b", "\\bdouble\\b", "\\bint\\b",
+      "\\bnum\\b", "\\bString\\b", "\\bObject\\b",
+      "\\bNever\\b", "\\bList\\b", "\\bMap\\b",
+      "\\bSet\\b", "\\bIterable\\b", "\\bIterator\\b",
+      "\\bFuture\\b", "\\bStream\\b", "\\bFunction\\b",
+      "\\bType\\b", "\\bDateTime\\b", "\\bDuration\\b",
+      "\\bRegExp\\b", "\\bUri\\b", "\\bSymbol\\b"
+    ]
+  },
+  {
+    "type": "directive",
+    "patterns": [
+      "@[A-Za-z_][A-Za-z0-9_]*",
+      "@[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*"
+    ]
+  },
+  {
+    "type": "number",
+    "patterns": [
+      "\\b0[xX][0-9A-Fa-f]+\\b",
+      "\\b[0-9]+(?:\\.[0-9]+)?(?:[eE][+-]?[0-9]+)?\\b"
+    ]
+  },
+  {
+    "type": "function",
+    "patterns": [ "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()" ]
+  }
+]
